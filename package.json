@@ -1,0 +1,13 @@
+{
+  "name": "ours-project",
+  "version": "1.0.0",
+  "description": "Monorepo for GraphQL api and client",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd server && yarn && cd ../client/react-app/packages/frontend && yarn",
+    "dev": "cd server && npm run dev & cd client/react-app/packages/frontend && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "odiaz.dw@gmail.com",
+  "license": "ISC"
+}

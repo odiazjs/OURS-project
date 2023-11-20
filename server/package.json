@@ -1,0 +1,31 @@
+{
+  "name": "ours-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npm run build && sls offline",
+    "deploy": "npm run build && sls deploy --verbose",
+    "generate": "graphql-codegen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "odiaz.dw@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-lambda": "^3.13.0",
+    "graphql": "^16.8.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@types/lodash": "^4.14.201",
+    "@types/node": "^20.9.2",
+    "dotenv": "^16.3.1",
+    "serverless-offline": "^13.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

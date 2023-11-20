@@ -1,0 +1,26 @@
+type Query {
+  hello: String
+}
+
+type Query {
+  getClients: [Client]
+  getClient(id: ID): Client
+  getEvents: [Event]
+  getEvent(id: ID): Event
+  getEventsByClient(clientId: ID): [Event]
+}
+
+type Client {
+  firstName: String
+  lastName: String
+  email: String
+  id: ID
+}
+
+scalar DateTime
+
+type Event {
+  id: ID
+  startDateTime: DateTime
+  title: String
+}

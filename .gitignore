@@ -128,3 +128,15 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# client modules
+client/react-app/node_modules
+client/react-app/packages/core/node_modules
+client/react-app/packages/frontend/node_modules
+client/react-app/packages/functions/node_modules
+
+# server modules
+server/node_modules
+
+# ignore all node_modules anywhere
+**/node_modules
