@@ -5,13 +5,10 @@ import { gqlResolvers } from "./resolvers";
 
 config();
 
-const typeDefs = readFileSync("schema.graphql", "utf8");
+export const typeDefs = readFileSync("schema.graphql", "utf8");
 
-const resolvers = {
+export const resolvers = {
   Query: {
-    hello: async () => {
-      return "Hello, world!";
-    },
     getClients: gqlResolvers.queryClientList,
     getClient: gqlResolvers.findClientById,
     getEvents: gqlResolvers.queryEventList,
@@ -20,7 +17,7 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
+export const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: process.env.NODE_ENV === "development",

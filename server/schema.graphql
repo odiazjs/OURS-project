@@ -1,8 +1,4 @@
 type Query {
-  hello: String
-}
-
-type Query {
   getClients: [Client]
   getClient(id: ID): Client
   getEvents: [Event]

@@ -1,7 +1,7 @@
 import { StackContext, StaticSite } from "sst/constructs";
 
-export function ExampleStack({ stack }: StackContext) {
-  const site = new StaticSite(stack, "ReactSite", {
+export function StaticSiteStack({ stack }: StackContext) {
+  const site = new StaticSite(stack, "ReactStaticSite", {
     path: "packages/rx",
     buildCommand: "npm run build",
     buildOutput: "build",

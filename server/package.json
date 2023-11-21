@@ -8,23 +8,27 @@
     "dev": "npm run build && sls offline",
     "deploy": "npm run build && sls deploy --verbose",
     "generate": "graphql-codegen",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "odiaz.dw@gmail.com",
   "license": "ISC",
   "dependencies": {
     "apollo-server-lambda": "^3.13.0",
     "graphql": "^16.8.1",
+    "graphql-tools": "^9.0.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@types/jest": "^29.5.8",
     "@types/lodash": "^4.14.201",
     "@types/node": "^20.9.2",
     "dotenv": "^16.3.1",
+    "jest": "^29.7.0",
     "serverless-offline": "^13.3.0",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
