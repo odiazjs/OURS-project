@@ -1,17 +1,17 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+
+const apiUrls = {
+  dev: "http://localhost:3000/dev/graphql",
+  prod: "https://y9jrg36qi8.execute-api.us-east-1.amazonaws.com/dev/graphql",
+};
 
 export const client = new ApolloClient({
-  uri: "http://localhost:3000/dev/graphql",
+  uri: process.env.NODE_ENV === "development" ? apiUrls.dev : apiUrls.prod,
   cache: new InMemoryCache(),
 });
 

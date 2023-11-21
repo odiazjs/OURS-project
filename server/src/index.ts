@@ -24,7 +24,12 @@ export const server = new ApolloServer({
   context: ({ event, context }) => {
     // Debugging
     return {
-      headers: event.headers,
+      headers: {
+        ...event.headers,
+        ...{
+          "Access-Control-Allow-Origin": "*",
+        },
+      },
       functionName: context.functionName,
       event,
       context,

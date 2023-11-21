@@ -1,7 +1,6 @@
 org: odiaz
 app: apollo-lambda
-# serverless.yml
-service: apollo-lambda
+service: apollo-lambda-ours-1
 provider:
   name: aws
   runtime: nodejs14.x
@@ -13,9 +12,9 @@ functions:
     events:
       - http:
           path: /graphql
-          method: post
+          method: GET
           cors: true
       - http:
           path: /graphql
-          method: get
+          method: POST
           cors: true
