@@ -1,20 +1,21 @@
 org: odiaz
 app: apollo-lambda
-service: apollo-lambda-ours-1
+service: apollo-lambda-1
+
 provider:
   name: aws
   runtime: nodejs14.x
+  region: us-east-1
+  stage: dev
+
 plugins:
   - serverless-offline
+
 functions:
   graphql:
     handler: dist/index.handler
     events:
       - http:
-          path: /graphql
-          method: GET
-          cors: true
-      - http:
-          path: /graphql
-          method: POST
+          path: "{proxy+}"
+          method: any
           cors: true

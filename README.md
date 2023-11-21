@@ -36,3 +36,7 @@ To set up the project:
     Server: http://localhost:3000
     React App: http://localhost:3001
 ```
+
+### Deploying
+- /server and yarn deploy (serverless framework)
+- /client/react-app/packages/rx and yarn deploy (SST static site)

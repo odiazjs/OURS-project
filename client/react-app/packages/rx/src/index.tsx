@@ -7,7 +7,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const apiUrls = {
   dev: "http://localhost:3000/dev/graphql",
-  prod: "https://y9jrg36qi8.execute-api.us-east-1.amazonaws.com/dev/graphql",
+  prod: "https://0yp15ueie2.execute-api.us-east-1.amazonaws.com/dev/graphql",
 };
 
 export const client = new ApolloClient({
